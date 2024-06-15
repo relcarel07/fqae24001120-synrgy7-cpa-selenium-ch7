@@ -17,8 +17,9 @@ public class ProductPage {
     By shopCart = By.id("shopping_cart_container");
     By backpackAddCart = By.id("add-to-cart-sauce-labs-backpack");
     By tshirtAddCart = By.id("add-to-cart-sauce-labs-bolt-t-shirt");
-    By highPriceItem = By.id("item_5_title_link");
-    By lowPriceItem = By.id("item_2_title_link");
+    By highfirstPriceItem = By.id("item_5_title_link");
+    By highsecondPriceItem = By.id("item_4_title_link");
+    By itemSuccesLogin = By.id("item_4_title_link");
 
     public ProductPage(WebDriver driver){
         this.driver = driver;
@@ -33,6 +34,10 @@ public class ProductPage {
         return driver.findElement(titleText).getText();
     }
 
+    public String getItemSucessLogin(){
+        return driver.findElement(itemSuccesLogin).getText();
+    }
+
     public void productSort(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(productSort));
         driver.findElement(productSort).click();
@@ -44,11 +49,11 @@ public class ProductPage {
     }
 
     public String gethighPriceItem(){
-        return driver.findElement(highPriceItem).getText();
+        return driver.findElement(highfirstPriceItem).getText();
     }
 
     public String getlowPriceItem(){
-        return  driver.findElement(lowPriceItem).getText();
+        return driver.findElement(highsecondPriceItem).getText();
     }
 
     public void shopCart(){

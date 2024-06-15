@@ -35,6 +35,10 @@ public class SuccesfullyLogin {
         //validation title
         Assert.assertEquals(productPage.getTitleText(),"Products");
         System.out.println("Current Page: " + driver.findElement(By.xpath("//*[contains(@class,'title')]")).getText());
+
+        //validation get item
+        Assert.assertEquals(productPage.getItemSucessLogin(),"Sauce Labs Backpack");
+        System.out.println("Get Item: " + driver.findElement(By.id("item_4_title_link")).getText());
     }
 
     @AfterClass

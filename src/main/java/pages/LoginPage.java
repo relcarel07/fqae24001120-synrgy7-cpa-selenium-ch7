@@ -15,7 +15,7 @@ public class LoginPage {
     By usernameField = By.id("user-name");
     By passwordField = By.id("password");
     By loginButton = By.id("login-button");
-    By titleError = By.xpath("//*[contains(@class,'error-message-container')]");
+    By titleError = By.className("error-message-container");
     By errorButton = By.xpath("//button[@class='error-button']");
 
     public LoginPage(WebDriver driver){

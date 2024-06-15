@@ -32,8 +32,8 @@ public class FailedLoginWithWrongPassword {
         System.out.println("Current URL: " + driver.getCurrentUrl());
 
         //validation message error
-        //Assert.assertEquals(loginPage.getTitleError(),"Epic sadface: Username and password do not match any user in this service");
-        //System.out.println("Error Message: " + driver.findElement(By.xpath("//*[contains(@class,'error-message-container')]")).getText());
+        Assert.assertTrue(loginPage.getTitleError().contains("Epic sadface: Username and password do not match any user in this service"));
+        System.out.println("Error Message: " + driver.findElement(By.className("error-message-container")).getText().contains("Epic sadface: Username and password do not match any user in this service"));
     }
 
     @AfterClass

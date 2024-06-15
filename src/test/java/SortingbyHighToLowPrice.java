@@ -37,11 +37,11 @@ public class SortingbyHighToLowPrice {
 
         //validation high price
         Assert.assertEquals(productPage.gethighPriceItem(),"Sauce Labs Fleece Jacket");
-        System.out.println("Item High Price: " + driver.findElement(By.id("item_5_title_link")).getText());
+        System.out.println("Item First High to Low Price: " + driver.findElement(By.id("item_5_title_link")).getText());
 
         //validation low price
-        Assert.assertEquals(productPage.getlowPriceItem(),"Sauce Labs Onesie");
-        System.out.println("Item Low Price: " + driver.findElement(By.id("item_2_title_link")).getText());
+        Assert.assertEquals(productPage.getlowPriceItem(),"Sauce Labs Backpack");
+        System.out.println("Item Second High to Low Price: " + driver.findElement(By.id("item_4_title_link")).getText());
     }
 
     @AfterClass
